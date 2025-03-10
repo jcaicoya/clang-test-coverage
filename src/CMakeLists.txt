@@ -1,0 +1,5 @@
+add_library(primality primality.cpp)
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    target_compile_options(primality PRIVATE ${COVERAGE_FLAGS})
+    target_link_options(primality PRIVATE ${COVERAGE_LINK_FLAGS})
+endif()
